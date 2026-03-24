@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 100%);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Robust Google Translate Hiding */
+  .goog-te-banner-frame,
+  #goog-gt-tt,
+  .goog-te-balloon-frame,
+  .goog-te-menu-frame,
+  iframe.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  body { 
+    top: 0 !important; 
+  }
+  
+  .goog-text-highlight { 
+    background: transparent !important; 
+    box-shadow: none !important; 
+  }
+
+  .slider-dot.active { 
+    background-color: white; 
+    width: 32px; 
+  }
+  
+  .swatch-active { 
+    border-color: white; 
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.2); 
+    scale: 1.1; 
+  }
+}
